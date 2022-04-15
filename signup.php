@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>XYZ Online Examination Portal</title>
+    <title>DTU Examination Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <?php
@@ -22,8 +22,8 @@ if (isset($_POST['studsu'])) {
         $gender1 = mysqli_real_escape_string($conn, $_POST['gender1']);
         $password1 = mysqli_real_escape_string($conn, $_POST['password1']);
         $cpassword1 = mysqli_real_escape_string($conn, $_POST['cpassword1']);
-        $password1 = crypt($password1,'rakeshmariyaplarrakesh');
-        $cpassword1 = crypt($cpassword1,'rakeshmariyaplarrakesh');
+        $password1 = crypt($password1,'absaarandarayan');
+        $cpassword1 = crypt($cpassword1,'absaarandarayan');
         if ($password1 == $cpassword1) {
             $sql = "insert into student (usn,name,mail,phno,dept,gender,DOB,pw) values('$usn1','$name1','$mail1','$phno1','$dept1','$gender1','$dob1','$password1')";
             if (mysqli_query($conn, $sql)) {
@@ -62,8 +62,8 @@ if (isset($_POST['staffsu'])) {
         $gender2 = mysqli_real_escape_string($conn, $_POST['gender2']);
         $password2 = mysqli_real_escape_string($conn, $_POST['password2']);
         $cpassword2 = mysqli_real_escape_string($conn, $_POST['cpassword2']);
-        $password2 = crypt($password2,'rakeshmariyaplarrakesh');
-        $cpassword2 = crypt( $cpassword2,'rakeshmariyaplarrakesh');
+        $password2 = crypt($password2,'absaarandarayan');
+        $cpassword2 = crypt( $cpassword2,'absaarandarayan');
         if ($password2 == $cpassword2) {
             $sql = "insert into staff (staffid,name,mail,phno,dept,gender,DOB,pw) values('$usn2','$name2','$mail2','$phno2','$dept2','$gender2','$dob2','$password2')";
             if (mysqli_query($conn, $sql)) {
@@ -164,7 +164,7 @@ if (isset($_POST['staffsu'])) {
     <div
         style="font-family: 'Courier New', Courier, monospace;margin: 0;padding: 0;background-color: #fff;height: 100%;width: 100%;padding-bottom: 5vw;background-image: url(images/images.jfif);height: 100% !important;background-repeat: no-repeat;background-size:cover;">
         <center>
-            <h1 style="text-transform: uppercase;padding: 2vw;background-color: #000;color: #fff">XYZ Online Examination Portal</h1>
+            <h1 style="text-transform: uppercase;padding: 2vw;background-color: #000;color: #fff">DTU Examination Portal</h1>
         </center>
         <div class="seluser">
             <center> <button onclick="stud()">STUDENT</button><button onclick="staff()">STAFF</button></center>

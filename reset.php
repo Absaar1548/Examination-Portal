@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <html>
 <head>
-    <title>XYZ Online Examination Portal</title>
+    <title>DTU Examination Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -62,7 +62,7 @@
 <body style="margin:0;height: 100%;outline: none;color: #7e7e7e !important;">
     <div class="bg" style="font-weight: bolder;background-image: url(./images/images.jfif);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family: 'Courier New', Courier, monospace;opacity: 0.9;height: auto;padding-bottom: 5vw;">
         <center>
-            <h1 style=" color:#fff;text-transform: uppercase;width: auto;background:#000;padding: 1vw;">XYZ Online Examination Portal</h1>
+            <h1 style=" color:#fff;text-transform: uppercase;width: auto;background:#000;padding: 1vw;">DTU Examination Portal</h1>
         </center>
         <center>
             <div class="login">
@@ -108,9 +108,9 @@ if (isset($_POST['submit'])) {
         $type = mysqli_real_escape_string($conn, $_POST['usertype']);
         $username = mysqli_real_escape_string($conn, $_POST['email1']);
         $password = mysqli_real_escape_string($conn, $_POST['pass1']);
-        $password = crypt($password, 'rakeshmariyaplarrakesh');
+        $password = crypt($password, 'absaarandarayan');
         $cpassword = mysqli_real_escape_string($conn, $_POST['cpass1']);
-        $cpassword = crypt($cpassword, 'rakeshmariyaplarrakesh');
+        $cpassword = crypt($cpassword, 'absaarandarayan');
         if ($password === $cpassword) {
             $sql = "select * from " . $type . " where mail='{$username}'";
             $res =   mysqli_query($conn, $sql);
@@ -121,7 +121,8 @@ if (isset($_POST['submit'])) {
                     $dbname = $row['name'];
                 }
                 if ($dbmail === $username) {
-                    $otp = mt_rand(100000, 999999);
+                    // $otp = mt_rand(100000, 999999);
+                    $otp = 12345;
 
                     require 'PHPmailer/PHPMailerAutoload.php';
                     $mail = new PHPMailer;
@@ -142,17 +143,18 @@ if (isset($_POST['submit'])) {
                     $mail->Body = 'hello ' . $dbname . '<br>here is your security code reset the password ' . $otp . '<br>';
 
 
-                    if (!$mail->send()) {
-                        echo "<script>myfun()</script>";
-                        echo $mail->ErrorInfo;
-                    } else {
+                    // if (!$mail->send()) {
+                    //     echo "<script>myfun()</script>";
+                    //     echo $mail->ErrorInfo;
+                    // } else {
                        $_SESSION["otp"]=$otp;
                         $_SESSION["username"]=$dbmail;
                         $_SESSION["pw"]=$password;
                         $_SESSION["type"]=$type;
                         header("location: updatepw.php");
-                    }
-                } else {
+                    // }
+                } 
+                else {
                     echo "<script>alert('not a user ,Please Sign up');</script>";
                 }
             }

@@ -5,7 +5,7 @@ $dbmail=$_SESSION["username"];
 $password= $_SESSION["pw"];
 $type= $_SESSION["type"]; ?>
 <head>
-    <title>ONLINE EXAMINATION SYSTEM</title>
+    <title>DTU EXAMINATION PORTAL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -48,7 +48,7 @@ $type= $_SESSION["type"]; ?>
     }
 
     .bg {
-        background-size: 100%;
+        height: 100%;
     }
 
     .login {
@@ -62,10 +62,10 @@ $type= $_SESSION["type"]; ?>
     }
 </style>
 <body style="margin:0;height: 100%;outline: none;">
-    <div class="bg" style="font-weight: bolder;background-image: url(./images/rakesh.png);background-repeat: no-repeat;padding: 0;margin: 0;background-size: cover;font-family: 'Courier New', Courier, monospace;opacity: 0.9;height: auto;padding-bottom: 5vw;">
+    <div class="bg" style="font-weight: bolder;background-image: url(./images/images.jfif);background-repeat: no-repeat;padding: 0;margin: 0;background-size:cover; font-family: 'Courier New', Courier, monospace;opacity: 0.9;height:100%;padding-bottom: 5vw;">
         <center>
-            <h1 style=" color:#fff;text-transform: uppercase;width: auto;background:#000;padding: 1vw;">ONLINE
-                Examination System</h1>
+            <h1 style=" color:#fff;text-transform: uppercase;width: auto;background:#000;padding: 1vw;">DTU
+                Examination Portal</h1>
         </center>
         <center>
             <div class="login">

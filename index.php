@@ -3,7 +3,7 @@
     
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XYZ Online Examination Portal</title>
+    <title>DTU Examination Portal</title>
 </head>
 
 <?php
@@ -17,7 +17,7 @@ if (isset($_POST['login']))
         $type = mysqli_real_escape_string($conn, $_POST['usertype']);
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['pass']);
-        $password = crypt($password, 'rakeshmariyaplarrakesh');
+        $password = crypt($password, 'absaarandarayan');
         $sql = "select * from " . $type . " where mail='{$username}'";
         $res =   mysqli_query($conn, $sql);
         if ($res == true) {
@@ -101,7 +101,7 @@ if (isset($_POST['login']))
 <body style="margin:0">
     <div class="bg" style="font-weight: bolder; background-image: url(./images/images2.png); background-size: cover; text-transform: uppercase; font-family: 'Courier New'; opacity: 0.9; height: 100%;">
         <center>
-            <h1 style=" color:rgb(255, 255, 255); width: auto; background:rgb(0, 0, 0);padding: 1vw;">xyz examination protal</h1>
+            <h1 style=" color:rgb(255, 255, 255); width: auto; background:rgb(0, 0, 0);padding: 1vw;">DTU examination protal</h1>
         </center>
         <center>
             <div class="login" style="color: rgb(0, 0, 0); width: 40vw; background-color: rgb(255, 255, 255); border: 2px solid black; padding: 2vw; margin-top: 10vh; border-radius: 10px;">

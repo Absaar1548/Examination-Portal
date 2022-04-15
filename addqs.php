@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        Onine examination System
+    DTU examination PORTAL
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -236,7 +236,7 @@ if (!$conn) {
 <body style="margin: 0 !important;font-weight: bolder !important;font-family: 'Courier New', Courier, monospace;color:#fff !important">
     <div style="background-color: #7e7e7e;height: 100%;">
         <div class="navbar" style="display: inline-flex;width: 100%;color:#7e7e7e;position:fixed;">
-            <section style="margin: 1.5vw; color:white">ONLINE EXAMINATION SYSTEM</section>
+            <section style="margin: 1.5vw; color:white">DTU examination PORTAL</section>
             <ul style="display: inline-flex;padding: 0 !important;margin: 0;float: right;right: 0;position: fixed;width: 50vw;color:#e3e8e4;">
                 <li onclick="dash()">Dashbord</li>
                 <li onclick="prof()">profile</li>
